@@ -1,0 +1,34 @@
+.mat-input-container {
+    display: block;
+}
+.img-upload-form .row {
+    padding: 15px 0;
+}
+
+.img-drop-zone {
+    border: dotted 3px lightgray;
+    height: 350px;
+    position: relative;
+}
+.img-drop-zone label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+.img-drop-zone input {
+    display: none;
+}
+.img-drop-zone label span {
+    display: block;
+    text-align: center;
+    height: 100%;
+    padding-top: 150px;
+}
+.img-drop-zone img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+.nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */

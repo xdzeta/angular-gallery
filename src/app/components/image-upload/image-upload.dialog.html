@@ -1,0 +1,41 @@
+<h2>Upload new image</h2>
+<form [formGroup]="imgUploadForm" class="img-upload-form"
+      novalidate autocomplete="off">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="form-group margin-bottom">
+        <md-input-container width="100%">
+          <input mdInput tdAutoTrim md-maxlength="255" type="text" placeholder="Title" class="form-control"
+               formControlName="title" required
+               name="title">
+        </md-input-container>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="img-drop-zone">
+      <img [src]="filePreviewPath" *ngIf="filePreviewPath" />
+      <input type="file" ng2FileSelect [uploader]="uploader" id="uploader-input" />
+      <label for="uploader-input"
+         ng2FileDrop
+         [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+         (fileOver)="fileOverBase($event)"
+         [uploader]="uploader">
+        <span *ngIf="!filePreviewPath">Click and drag image in area</span></label>
+    </div>
+  </div>
+  <div class="row" *ngIf="data.galleryImage">
+    <button md-raised-button class="mat-raised-button mat-warn text-upper btn-image-upload" (click)="delete()">
+      Delete image
+    </button>
+    <button md-raised-button class="mat-raised-button mat-accent text-upper btn-image-upload" (click)="save()">
+      Save changes
+    </button>
+  </div>
+
+  <div class="row" *ngIf="!data.galleryImage">
+    <button class="mat-raised-button mat-accent text-upper btn-image-upload" (click)="upload()">
+      Upload
+    </button>
+  </div>
+</form>

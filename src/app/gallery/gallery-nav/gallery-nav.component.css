@@ -1,0 +1,18 @@
+.gallery-nav {
+    position: absolute;
+    width: 800px;
+    top: 0;
+}
+
+.gallery-nav md-icon {
+    cursor: pointer;
+    position: absolute;
+}
+
+.gallery-nav md-icon.chevron_left {
+    left: 0;
+}
+
+.gallery-nav md-icon.chevron_right {
+    right: 0;
+}

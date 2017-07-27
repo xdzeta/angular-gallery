@@ -1,0 +1,41 @@
+<td-layout #layout>
+
+  <div td-sidenav-content>
+    .. more sidenav content
+  </div>
+
+  <td-layout-nav color="none">
+    <div td-toolbar-content layout="row" layout-align="start center" flex>
+      <span flex ></span>
+      <div *ngIf="user">
+        <img md-card-avatar [attr.src]="user.photoURL">
+        <span [innerHtml]="user.displayName"></span>
+        <button md-raised-button class="mat-raised-button mat-accent text-upper" (click)="logout()">Logout</button>
+      </div>
+    </div>
+
+    <!-- router outlet goes here -->
+    <section class="bgc-blue-grey-50">
+      <div layout-gt-xs="row">
+        <div flex class="pad" tdMediaToggle="gt-xs" [mediaClasses]="['pad-xl']">
+          <div class="push-top-xl" hide-xs></div>
+
+          <router-outlet></router-outlet>
+
+        </div>
+      </div>
+    </section>
+    <!-- end content -->
+
+    <section class="bgc-blue-grey-800 tc-blue-grey-100">
+      <div layout-gt-xs="row" layout-align-gt-xs="center center">
+        <div layout-gt-sm="row" flex-gt-xs="75" layout-margin layout-padding>
+          <div flex>
+            <p class="md-body-1">&copy; Copyright 2017 NixSolutions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </td-layout-nav>
+
+</td-layout>

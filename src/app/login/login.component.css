@@ -1,0 +1,25 @@
+.login-card {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.mat-card-header .mat-card-title {
+    font-size: 24px;
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+
+.button-row button span {
+    font-size: 22px;
+}
+
+.button-row .mat-icon {
+    position: relative;
+    bottom: -4px;
+    right: 5px;
+}
