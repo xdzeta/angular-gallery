@@ -4,7 +4,7 @@ Test project implements an example of gallery of images.
 
 ##### The project uses:
 * [Angular 2](https://angular.io/);
-* [Webpack](https://webpack.github.io/) (instead of Angular2-CLI);
+* [Angular CLI](https://cli.angular.io/);
 
 ### Development
 1. `git clone https://github.com/nixsolutions/angular-gallery.git`
