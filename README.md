@@ -3,7 +3,7 @@
 Test project implements an example of gallery of images.
 
 ##### The project uses:
-* [Angular 2](https://angular.io/) (without TypeScript);
+* [Angular 2](https://angular.io/);
 * [Webpack](https://webpack.github.io/) (instead of Angular2-CLI);
 
 ### Development
